@@ -1,0 +1,526 @@
+
+body{
+    font-family: 'poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* root selector */
+:root{
+    --primary: rgb(221,149,47);
+    --dark:rgb(30,31,25);
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+}
+
+header{
+    background:  var(--pure);
+}
+
+/* container */
+.container{
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* media queries */
+@media(min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media(min-wisth: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media(min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1200px){
+    .conatainer{
+        max-width: 1152px;
+    }
+}
+
+/* navbar (menubar) section starts */
+.menubar {
+    background: url(../images/43.jpg);
+}
+
+.menubar ul {
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+.menubar ul li {
+  display: inline;
+  list-style: none;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: var(--pure);
+  padding: 0 26px 0 0;
+}
+
+.logo img {
+  margin: 10px auto 0px auto;
+  width:220px;
+}
+/* navbar ends */
+
+/* header slider section 1 */
+.view .slider .slide{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10rem;
+    margin-top: 4rem;
+}
+
+.view .slider .slide p{
+    font-family: 'Lato', sans-serif;
+    color: var(--pure);
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+.view .slider .slide span{
+    font-size: 2.2rem;
+}
+.view .slider-dots .dots{
+    list-style-type: none;
+    display: flex!important;
+    justify-content: center;
+}
+.view .slider-dots{
+    margin-top: 3rem;
+}
+.view .slider-dots button{
+    font-size: 0;
+    width: 8px;
+    height: 5px;
+    margin-right: 0.3rem;
+    border: none;
+    outline: none;
+    background: var(--ternary);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.wiew .section-heading span{
+    font-size: 2.2rem;
+}
+
+.view .dots li.slick-active button{
+    background: var(--primary);
+    width: 20px;
+}
+/* header slider ends */
+
+/* section heading and section starts */
+section{
+    padding: 6rem 0;
+}
+
+.section-heading{
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5;
+}
+.section-heading span{
+    color:var(--primary);
+    font-size: 2.5rem;
+}
+
+.section-heading + p{
+    color: var(--ternary);
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+/* ends */
+
+/* work section starts */
+
+section.work{
+    background: var(--light);
+}
+
+section.work .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 2rem;
+}
+
+section.work .section-heading{
+    color: var(--primary);
+    padding-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+section.work .hey{
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+section.work .card-wrapper .card{
+    position: relative;
+    height: 288px;
+}
+
+section.work .card-wrapper .card .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+section.work .card-wrapper .card:hover .overlay{
+    opacity: 1;
+}
+
+section.work .card-wrapper .card .overlay a{
+    color: var(--pure);
+    text-decoration: none;
+}
+
+section.work .card-wrapper .card img{
+    height: 100%;
+    width: 100%;
+}
+/* work section ends */
+
+/* blog section starts */
+section.blog{
+    background: url(../images/44.jpg);
+    padding-bottom: 7rem;
+}
+
+section.blog .section-heading{
+    color: var(--primary);
+    padding-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+section.blog .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+
+section.blog .card-wrapper .card{
+    background: var(--dark);
+}
+
+section.blog .card-wrapper .card .img-wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+section.blog .card-wrapper .card .card-content{
+    padding: 1rem;
+    padding-left: 2rem;padding-right: 2rem;
+}
+
+
+section.blog .card-wrapper .card .card-content a{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+section.blog .card-wrapper .card .card-content a:hover{
+    color: var(--primary);
+}
+
+section.blog .card-wrapper .card .card-content a.read-more{
+    font-size: 0.8rem;
+}
+/* blog section ends */
+
+/* review section starts */
+section.reviews .slider2 .slide{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10rem;
+}
+
+section.reviews .slider2 .slide p{
+    font-family: 'Lato', sans-serif;
+    color: var(--ternary);
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+}
+
+section.reviews .slider2 .slide span{
+    font-size: 0.8rem;
+}
+section.reviews .slider-dots2 .dots{
+    list-style-type: none;
+    display: flex!important;
+    justify-content: center;
+}
+section.reviews .slider-dots2{
+    margin-top: 3rem;
+}
+section.reviews .slider-dots2 button{
+    font-size: 0;
+    width: 8px;
+    height: 5px;
+    margin-right: 0.3rem;
+    border: none;
+    outline: none;
+    background: var(--ternary);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+section.rewiews .section-heading span{
+    font-size: 2.2rem;
+}
+
+section.reviews .dots li.slick-active button{
+    background: var(--primary);
+    width: 20px;
+}
+/* review section ends */
+
+/* services section */
+section.services {
+    padding: 0rem 0;
+}
+
+/* freelancer section */
+section.freelancer {
+    padding: 0rem 0;
+}
+section.freelancer img{
+   width: 100%;
+   height: auto;
+}
+
+/* footer section starts */
+footer{
+    background: var(--dark);
+    text-align: center;
+    padding: 5rem 0;
+}
+
+footer .copyright{
+    color: var(--ternary);
+}
+/* footer ends */
+
+.site-main-wrapper{
+    position: relative;
+}
+
+/* hamberger section starts */
+.hamberger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.hamberger img{
+    width: 30px;
+}
+
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--light);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+}
+
+.open{
+    transform: translateX(0);
+}
+
+.times{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.times img{
+    width: 30px;
+    position: relative;
+    left: -38px;
+}
+
+.mobile-nav ul{
+    list-style-type: none;
+}
+.mobile-nav ul li a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0;
+}
+/* hamberger section ends */
+
+
+/* media queries for tablets with max width 1024 */
+@media (max-width:1024px){
+    header #main-nav{
+        display: none;
+    }
+    .hamberger{
+        display: none;
+    }
+    .view .slider .slide span {
+        line-height: 1;
+        font-size: 29px;
+    }
+
+    section.work .card-wrapper .card {
+        height: 100%;
+        width: 100%;
+    }
+
+    section.work .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    section.blog .card-wrapper{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    section.freelancer {
+        padding: 0rem 0;
+    }
+    section.services {
+        padding: 0rem 0;
+    }
+  
+}
+
+/* media queries for mobile with max width 576 */
+@media(max-width:576px){
+    .hamberger{
+        display: block;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .menubar ul li a{
+        color: transparent;
+    }
+
+    .logo img{
+        position: relative;
+        left: 3rem;
+    }
+
+    .view .slider .slide span {
+        line-height: 1;
+    }
+
+    section.work .section-heading {
+        font-size: 28px;
+    }
+
+    section.work .card-wrapper .card {
+        height: 100%;
+        width: 100%;
+    }
+
+    section.blog .section-heading {
+        font-size: 28px;
+    }
+
+    section.reviews .slider2 .slide{
+        padding: 0;
+    }
+
+    section.reviews .slider .slide{
+        padding: 0;
+    }
+    .section-heading + p{
+        margin-bottom: 3.5rem;
+        margin-top: 2rem;
+    }
+
+    .section-heading span {
+        font-size: 26px;
+    }
+
+    section.freelancer{
+        padding: 0;
+    }
+
+    section.freelancer img {
+        width: 100%;
+        height: auto;
+    }
+
+    section.services {
+        padding: 0;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+
+    footer .copyright{
+        position: relative;
+        bottom: 4px;
+        font-size: 9px;
+    }
+
+}
